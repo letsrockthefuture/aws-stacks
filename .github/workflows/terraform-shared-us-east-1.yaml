@@ -1,0 +1,27 @@
+name: "terraform_shared_us_east_1"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+    paths:
+      - ".github/workflows/terraform-shared-us-east-1.yaml"
+      - "terraform/shared/us-east-1/**"
+  # pull_request:
+  #   branches:
+  #     - "main"
+  #   paths:
+  #     - ".github/workflows/terraform-shared-us-east-1.yaml"
+  #     - "terraform/shared/us-east-1/**"
+
+jobs:
+  terraform_shared_us_east_1:
+    name: "terraform_shared_us_east_1"
+    uses: letsrockthefuture/reusable-workflows/.github/workflows/terraform.yaml@main
+    with:
+      working_directory: "terraform/shared/us-east-1"
+      terraform_version: 1.1.2
+    secrets:
+      bc_api_key: ${{ secrets.BC_API_KEY }}
+      cli_config_credentials_token: ${{ secrets.TERRAFORM_API_TOKEN }}
