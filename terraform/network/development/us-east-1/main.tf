@@ -32,9 +32,9 @@ module "vpc_development" {
   enable_nat_gateway = false
   single_nat_gateway = true
 
-  public_subnet_tags = {
-    Name = "public-development-subnet"
-  }
+  # public_subnet_tags = {
+  #   Name = "public-development-subnet"
+  # }
 
   tags = {
     Owner       = "letsrockthefuture"
