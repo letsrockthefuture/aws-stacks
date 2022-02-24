@@ -3,7 +3,7 @@ name: "Release drafter"
 on:
   push:
     branches:
-      - main
+      - bla
     paths:
       # - "docs/**"
       - ".github/workflows/release.yaml"
@@ -11,7 +11,7 @@ on:
       - "src/**"
   pull_request:
     branches:
-      - main
+      - bla
     paths:
       # - "docs/**"
       - ".github/workflows/release.yaml"
