@@ -3,18 +3,18 @@ name: "Release drafter"
 on:
   push:
     branches:
-      - bla
+      - release
     paths:
       # - "docs/**"
-      - ".github/workflows/release.yaml"
+      - ".github/workflows/release-drafter.yaml"
       - "kubernetes/**"
       - "src/**"
   pull_request:
     branches:
-      - bla
+      - release
     paths:
       # - "docs/**"
-      - ".github/workflows/release.yaml"
+      - ".github/workflows/release-drafter.yaml"
       - "kubernetes/**"
       - "src/**"
 

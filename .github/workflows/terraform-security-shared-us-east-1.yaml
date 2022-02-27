@@ -10,8 +10,8 @@ on:
       - "terraform/security/shared/us-east-1/**"
 
 jobs:
-  terraform_shared_us_east_1:
-    name: "terraform_security_shared_us_east_1"
+  terraform:
+    name: "Terraform"
     uses: letsrockthefuture/reusable-workflows/.github/workflows/terraform.yaml@main
     with:
       working_directory: "terraform/security/shared/us-east-1"

@@ -10,8 +10,8 @@ on:
       - "terraform/workload/development/us-east-1/**"
 
 jobs:
-  terraform_development_us_east_1:
-    name: "terraform_workload_development_us_east_1"
+  terraform:
+    name: "Terraform"
     uses: letsrockthefuture/reusable-workflows/.github/workflows/terraform.yaml@main
     with:
       working_directory: "terraform/workload/development/us-east-1"
